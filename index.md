@@ -3,11 +3,11 @@ layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
-Preparing for reproducibility occurs throughout the research process. The data management work done during a project's life cycle will lend itself to success when it is time for a data author, curator or journal to assess the reproducibility of a work. 
+This Library Carpentry lesson is the third in a series of lessons included in the Curating for Reproducibility Curriculum. Previous lessons laid the groundwork for understanding reproducibility [Lesson 1: Introduction to Curating for Reproducibility]() and outlined the necessary curation activities for supporting reproducible research [Lesson 2: Curating for Reproducibility](). 
 
-[Lesson 2: Curating for Reproducibility Workflows]() of the Curating for Reproducibility Curriculum introduced the Data Quality Review (DQR) Framework, a process whereby data and associated files are assessed and required actions are taken to ensure files are independently understandable and reusable. Three of the DQR categories – File, Documentation, and Data Review – work in tandem with Code Review, which is central to assessing the reproducibility of reported research results. 
+This lesson extends the instruction provided in previous lessons by focusing on the code review component of the Data Quality Review framework. Code review, which is a critical part of assessing reproducibility, requires skills that may be less familiar to librarians and information science professionals. By dedicating an entire lesson to assessing reproducibility, learners will be able to explore the code review process in more detail and practice some of the most essential code review tasks.
 
-Assessing reproducibility includes code inspection, code execution, and reviewing the code output against the results presented in the manuscript. As the name suggests, code inspection refers to examining specific aspects of the code. Code execution refers to ensuring that the code runs error-free, which is necessary for verifying that results are reproduced. Manuscript and output review refer to comparing the output produced by the code with the findings reported in the manuscript, that is verifying the reproducibility of the research compendium. 
+The goal of this lesson is to give learners an in depth view of reproducibility assessment processes and to gain the skills necessary to execute code review tasks as part of curating for reproducibility workflows based on the Data Quality Review framework. Upon completion of this and the two previous lessons of the Curating for Reproducibility Curriculum, learners will be prepared to complete [Lesson 4: Compendium Packaging and Publishing](), which presents considerations for the final steps of curating for reproducibility. 
 
 <!-- this is an html comment -->
 
@@ -15,7 +15,7 @@ Assessing reproducibility includes code inspection, code execution, and reviewin
 
 > ## Prerequisites
 >
-> While this lesson has no prerequisites, completion of the previous lessons of the Curating for Reproducibility Curriculum ([Lesson 1: Introduction to Curating for Reproduciblity]() and [Lesson 2: Curating for Reproducibility Workflows]()) prior to starting this lesson.
+> While this lesson has no prerequisites, completion of the previous lessons of the Curating for Reproducibility Curriculum ([Lesson 1: Introduction to Curating for Reproducibility]() and [Lesson 2: Curating for Reproducibility Workflows]()) prior to starting this lesson.
 {: .prereq}
 
 {% include links.md %}
