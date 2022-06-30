@@ -74,6 +74,10 @@ sessionInfo()
 > Rather than enabling scripts to run on different machines, constraining the execution environment to a specific operating system and specific dependencies may make it easier to ensure re-execution. 
 >
 > A common approach to making it easier to rerun code is to do the computation on a cloud-based service or platform. Examples of this approach include [WholeTale](https://wholetale.org/), [Code Ocean](https://codeocean.com/), and [MyBinder](https://mybinder.org/). Many of these are services are built on top of JupyterHub or RStudio, which encapsulate the compute environment in a container. 
+> 
+> For desktop based workflows, the computation environment can be fixed in place using a number of solutions such as using a virtual machine or containerisation. This can be done by carefully constructing images or build scripts to use [Vagrant](https://www.vagrantup.com/), [Docker](https://www.docker.com/) or [Singularity](https://sylabs.io/), usually starting with an image or container that includes all or most of the software required. 
+> 
+> The image or container might be a suitable target for archiving (being mindful of licensing restrictions), or the scripts and/or config files that describe how to build the image or container, fetch the appropriate code and data, and then combine them is a potential approach for longer-term preservation of research compendia. 
 {: .callout}
 
 ## Common Code Issues
