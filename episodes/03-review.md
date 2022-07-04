@@ -7,15 +7,13 @@ questions:
 - "What are outputs and why are they important?"
 - "What are the essential steps in output and manuscript review?"
 objectives:
-- "To know the importance of reviewing output files and including them in the reproducibility package"
-- "Identify and verify outputs"
-- "Review manuscripts"
+- "Understand the importance of code output and manuscript review to curating for reproducibilty practice"
+- "Compare code outputs with manuscript results to identify discrepancies"
+- "Understand how to address inconsistencies found during code output and manuscript review"
 keypoints:
-- "Review the output and include a copy in the reproducibility package."
-- "Ensure the output files are independently understandable and re-user friendly."
-- "Account for every table, figure, and in-text numbers on the manuscript."
-- "Identify the program (code) and specify the line number in the code that created them."
-- "Ensure the code reproduces the tables, figures, and in-text numbers on the manuscript."
+- "Every table, figure, and in-text number in the manuscript should be accounted for in code outputs."
+- "The curating for reproducibilty workflow includes identifying specific commands in code files that produce outputs, and then verifying that reported results can be reproduced using that code."
+- "Curators should document discrepanices found during the code output and manuscript review process and take steps to address them." 
 ---
 You reviewed files, documentation, and data. You ran the code and confirmed that it is error-free. You are now ready for a key part of curating for reproducibility: comparing the output produced by the code with the findings reported in the article!
 
