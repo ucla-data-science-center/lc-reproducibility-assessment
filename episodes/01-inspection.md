@@ -108,7 +108,9 @@ The code header metadata is an example of non-executable comments that also appe
 
 Non-executable comments are like a “note to self” that tells researchers what the code is doing and why.  These annotations remind the researcher who originally wrote the code of the analytical workflow they used to generate their research results, while also making this information clear to other researchers. Code comments that support reproducibility often include explanations of what lines or blocks of code are meant to do or what outputs the code should produce.
 
-The syntax for non-executable comments often uses a specified symbol or set of symbols (`*`, `//`, `/**`, or  `#` depending on the programming language placed before the comment text, which signals to the software program that the text should be ignored. 
+The syntax for non-executable comments often uses a specified symbol or combination of symbols (`*`, `//`, `/**`, or  `#` depending on the programming language) placed before the comment text, which signals to the software program that the text should be ignored. 
+
+The example below show examples of non-executable comments inserted in the code:
 
 ![Examples of non-executable code comments]({{ page.root }}/fig/01-code-comments.png "Examples of non-executable code comments")
 
