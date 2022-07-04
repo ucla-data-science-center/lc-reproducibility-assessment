@@ -3,13 +3,17 @@ title: "Code Execution"
 teaching: 0
 exercises: 0
 questions:
-- "How does one ensure an error-free code at the time of publication?"
-- "What are some common errors that cause non-executable code?"
+- "What does it mean to execute code in the context of a research compendium?"
+- "What can be done prior to publication to ensure that code will run error-free?"
+- "What are some of the common errors that cause non-executable code?"
 objectives:
-- "To ensure a working, automated, and independently understandable code."
+- "Understand the importance of the code execution tasks to curating for reproducibility" 
+- "Recall some of the common issues that prevent code from fully executing" 
+- "Perform the code execution process as part of a reproduciblity assessment"
 keypoints:
-- "Review the code from beginning to end in one sitting immediately or soon after completing the manuscript."
-- "Full automation: As much as possible, limit any interaction between the user and code. Re-users should open the code and run it without modifying anything in it."
+- "Executing code tests the reusability of the research compendium, which is a fundamental criterion of reproducibility."
+- "Prior to running the code, the computing enviroment will need to meet the same or comparable techinical requirements as described in compendium documentation."
+- "Simple errors that prevent code from fully executing can be easily addressed."
 ---
 After inspecting the code to be sure it includes all of the elements required to achieve reproducibility, the next step in the curating for reproducibility workflow is to run the code to confirm that it executes without errors and produces the outputs that match the results reported in the manuscript. This episode explains the process of running the code and describes some of the most common code errors encountered during reproducibility assessments.
 
@@ -84,48 +88,57 @@ sessionInfo()
 
 There are many reasons that code may not run properly. Oftentimes, it is not the fault of the researcher who originally wrote the code.  As mentioned previously, differences in operating systems may affect the mechanics of the computation or cause discrepancies in the computational outputs. Software is often updated with bug fixes, new features, and other changes in ways that do not allow for backwards compatibility.  
 
-Other reasons that code may not execute fully (or not at all) may have something to do with the way the code was written:
-
-### Use of absolute file paths
-
-Absolute file paths assume that re-users have on their computer workstation a file directory structure identical to that of the original researcher.  When it is not the case that the file directory is identical, running the code will result in an error indicating that the file cannot be found.  Using relative paths makes the research compendium portable by calling files relative to its location in the current working directory.  
-
-[IMAGE that shows problem code and error in the output console]  
-
-[IMAGE that shows good code and expected results in the output console]
-
-### Missing package installation scripts
-
-Scripts to install packages are required to successfully execute the code (i.e., prerequisites).  Without package installation scripts, the code will fail to execute until the packages are installed and loaded.  
-
-[IMAGE that shows problem code and error in the output console]  
-
-[IMAGE that shows good code and expected results in the output console]  
+Other reasons that code may not execute fully (or not at all) may have something to do with the way the code was written. Below are some of the issues that are caused by faulty code.
 
 ### Syntax errors  
 
 A simple typo in lines of code can cause syntax errors that cause code execution to fail.  Running the code from beginning to end will catch these easy-to-fix errors.  
 
-[IMAGE that shows problem code and error in the output console]  
-
-[IMAGE that shows good code and expected results in the output console]  
-
 ### Missing comments  
 
-Code that is written with reproducibility in mind will include non-executable comments that map code blocks to the tables, figures, and in-line results presented in the publication.  The absence of such signposts make reproducibility assessment cumbersome.  
+Code that is written with reproducibility in mind will include non-executable comments that map code blocks to the tables, figures, and in-line results presented in the publication.  The absence of such signposts, which will not necessarily cause code execution errors, still make reproducibility assessment cumbersome.
 
-[IMAGE that shows problem code]  
+### Use of absolute file paths
 
-[IMAGE that shows good code]  
+Absolute file paths assume that re-users have on their computer workstation a file directory structure identical to that of the original researcher.  When it is not the case that the file directory is identical, running the code will result in an error indicating that the file cannot be found.  Using relative paths makes the research compendium portable by calling files relative to its location in the current working directory.  
+
+~~~
+# Read in the data file using an absolute file path
+read.csv ("C:/Users/Documents/PopStudy1/Data/AnalysisData/pop1_analysis_data.csv")
+
+#  Read in the data file using an absolute relative file path.
+read.csv ("./PopStudy1/Data/AnalysisData/pop1_analysis_data.csv")
+~~~
+{: .source}
+
+
+### Missing package installation scripts
+
+Scripts to install packages are required to successfully execute the code (i.e., prerequisites).  Without package installation scripts, the code will fail to execute until the packages are installed and loaded.  
+
+~~~
+* Create Prerequisite folder and put cluster2.ado in this folder
+sysdir set PLUS ..\Prerequisites
+ssc install outreg2
+ssc install wyoung
+~~~
+{: .source}  
 
 ### Missing seed  
 
 Any computation that generates random numbers (e.g., Monte Carlo simulations) requires a set seed to initialize the algorithm that generates the random numbers.  Without that specific seed, the code will generate different random numbers, which will produce different outputs each time the code is run.  
 
-[IMAGE that shows problem code]   
+~~~
+# Below, no seed is set so that every time the code is run, the output will be different.
+# set year list 
+yearsets <- split(sample(years, length(years)), cut(seq(1,length(years)), breaks-ks, labels=FALSE))
 
-[IMAGE that shows good code]
-
+# Below, the seed is set so that every time the code is run, the output will be the same.
+# set year list
+set.seed(123) # set seed for random number generation
+yearsets <- split(sample(years, length(years)), cut(seq(1,length(years)), breaks-ks, labels=FALSE))
+~~~
+{: .source}
 
 > ## Exercise: Troubleshooting Problem Code
 >
@@ -151,7 +164,20 @@ Any computation that generates random numbers (e.g., Monte Carlo simulations) re
 >
 > Another opportunity to improve code is to **address inefficiencies** in the code.  A script may include commands that achieve a specific outcome, but do so inefficiently. For example, a script that includes repeated statements when other expressions are more appropriate like in the example below:
 >
-> [IMAGE]
+> ~~~
+> * Inefficient code
+> SFA = SSMR1_N + SSPM1_N + SSST1N + SSAR1_N + SSDA1_N + SSLG1_N;
+> if SSMR1_N = . then SFA = .;
+> if SSPM1_N = . then SFA = .;
+> if SSST1_N = . then SFA = .;
+> if SSAR1_N = . then SFA = .;
+> if SSDA1_N = . then SFA = .;
+> if SSLG1_N = . then SFA = .;
+>
+> * Efficient code that achieves same output as inefficient code above
+> SFA = sum(SSMR1_N, SSPM1_N, SSST1N, SSAR1_N, SSDA1_N, SSLG1_N) 
+> SFA = sum(SSMR1_N, SSPM1_N, SSST1N, SSAR1_N, SSDA1_N, SSLG1_N na.rm = TRUE)
+> ~~~
 {: .callout}
 
 {% include links.md %}
