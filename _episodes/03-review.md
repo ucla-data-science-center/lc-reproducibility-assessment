@@ -23,7 +23,7 @@ An initial step in assessing reproducibility is inspecting the manuscript to ide
 
 Inspecting the manuscript requires a close reading of the entire document, which may include appendices and supplementary materials.  The goal of this task is to confirm that the code includes the commands needed to reproduce tables and figures, as well as results appearing as in-line text and not referenced in tables, figures, and/or graphs.
 
-To facilitate this process, curators may highlight sections of the manuscript where results appear. Doing so will make it easier to compare code outputs to the results in the manuscript.  
+To facilitate this process, curators may highlight sections of the manuscript where results appear. Doing so will make it easier to compare code outputs to the results in the manuscript. The next exercise offers an opportunity to practice this technique.
 
 > ## Exercise: Identifying Manuscript Results
 >
@@ -44,20 +44,24 @@ When code executes successfully, the program will display the results of the com
 
 Depending on how it is written, the code may include commands or scripts that produce output files that contain an image of a graph, figure, table, or some other result, which is often embedded in the manuscript.  These output files are standalone artifacts that are included in the research compendium. Below are some output file examples:
 
-[IMAGE]  
+![Output files]({{ page.root }}/fig/03-outputs.png "Example of output files") 
 
 ### The log file  
 
-The log file is of particular importance in the reproducibility assessment process because it not only can present code outputs in a readable format, but also it serves as a record of the analytical workflow.  The log file provides a written log of the computational events that occurred during a given session during which the program was executed.  The log file can be generated automatically or manually, and typically serves as a reference for researchers as they write or revise the manuscript.  
+The log file is of particular importance in the reproducibility assessment process because it not only can present code outputs in a readable format, but also it serves as a record of the analytical workflow.  The log file provides a written log of the computational events that occurred during a given session during which the program was executed.  The log file can be generated automatically or manually, and typically serves as a reference for researchers as they write or revise the manuscript. Below is an example log:
 
-For curators, the log file can be useful because results are written into the log (with the exception of graphs), which can be used to reference code outputs when assessing whether or not the research compendium can be used to reproduce manuscript results.  Below is an example log:
+![Log file example]({{ page.root }}/fig/03-log-file.png "Example of a log file") 
 
-[IMAGE of annotated log file]
+For curators, the log file can be useful because results are written into the log (with the exception of graphs), which can be used to reference code outputs when assessing whether or not the research compendium can be used to reproduce manuscript results. The image below shows an example of code and a section of the log file that the code produced: 
+
+![Code and the section of the log the code produced]({{ page.root }}/fig/03-code-log.png "Code and the section of the log file the code produced") 
 
 > ## Spotlight: When Data are Restricted
 >
-> text
+> For some research compendium, data files cannot be included because they contain personally identifiable informationn (PII), protected health information (PHI), or otherwise restricted data that cannot be shared publicly, even for curation purposes.  In these cases, the log file can provide evidence that the computational workflow was executed, and that it produced the outputs featured in the manuscript.
 {: .callout}
+
+Like much of what we have been learning, descriptions of concepts and processes can seem abstract when reading about them alone. Making the connection from concept to practice takes time, and cultivating a new skill takes practice. Let’s practice what we have learned in Lesson 3 thus far by digging into outputs from a real life study.
 
 > ## Identifying Code Outputs
 >
@@ -74,11 +78,11 @@ For curators, the log file can be useful because results are written into the lo
 
 The examples below show the output of specific code blocks alongside their corresponding results presented in the manuscript.  
 
-[Annotated image]  
+**Crosstab and Chi-Square (Stata):**
+![Crosstab output and manuscript results]({{ page.root }}/fig/03-crosstab.png "Example of Crosstab output and manuscript results")    
 
-[Annotated image]  
-
-[Annotated image]  
+**Probit regression (Stata):**
+![Probit regression and manuscript results]({{ page.root }}/fig/03-probit.png "Example of probit regression and manuscript results")  
 
 ### Verifying Reproducibility  
 
@@ -86,11 +90,7 @@ Verifying reproducibility requires that the results reported in the manuscript a
 
 Inconsistencies can appear in several ways, from differences in decimal rounding and mislabeled graphs, to more significant discrepancies as shown in the examples shown below:
 
-[IMAGE]
-
-[IMAGE]
-
-[IMAGE]
+![Example of code output and manuscript results discrepancy]({{ page.root }}/fig/03-typo.png "Example of code output and manuscript results discrepancy")
 
 > ## Exercise: Comparing Code Outputs to Manuscript Results
 >
