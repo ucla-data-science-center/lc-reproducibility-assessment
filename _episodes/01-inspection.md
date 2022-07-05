@@ -19,7 +19,7 @@ keypoints:
 - "By provding the author's contact information, computing requirements, and licensing terms, code header metadata signals to users of the author's transparency and willingness to assist with reuse."
 - "Non-executable comments in the code serve as a roadmap of the analytical workflow by identifying code segments and their purpose."
 ---
-Assessing the reproducibility of scientific claims involves an exhaustive list of curation actions, which are outlined in the Data Quality Review (DQR) framework introduced in [Lesson 2: Curating for Reproducibility Workflows]() of the Curating for Reproducibility Curriculum. DQR organizes these curation actions into four components--file review, documentation review, data review, and code review--each of which promote reproducibility by ensuring the completeness, accuracy, understandability, accessibility, and usability of the research compendium.
+Assessing the reproducibility of scientific claims involves an exhaustive list of curation actions, which are outlined in the Data Quality Review (DQR) framework introduced in [Lesson 2: Curating for Reproducibility Workflows](https://curating4reproducibility.org/cure-carpentry-02-workflows/) of the Curating for Reproducibility Curriculum. DQR organizes these curation actions into four components--file review, documentation review, data review, and code review--each of which promote reproducibility by ensuring the completeness, accuracy, understandability, accessibility, and usability of the research compendium.
 
 Code review, in particular, puts reproducibility to the test by verifying whether or not repeating the analytical steps used by the original researcher produces the same results reported in the published study. This assessment of reproducibility begins with a thorough code inspection.
 
@@ -97,7 +97,7 @@ Code header metadata should provide enough information to allow others to recrea
 >
 > > ## Solution
 > >
-> > 
+> > solution
 > >
 >
 > {: .solution}
@@ -125,7 +125,7 @@ The example below show examples of non-executable comments inserted in the code:
 
 ### The Main File
 
-In some cases, the analysis workflow is complex enough to require more than one code file to produce results.  For research compendia that contain more than one code file, it is highly recommended to use file names that indicate the order in which they must be run and/or provide this information in the README file (see Episode 3: Documentation Review in [Lesson 2: Curating for Reproducibility Workflows]() in the Curating for Reproducibility curriculum for more on the README file).
+In some cases, the analysis workflow is complex enough to require more than one code file to produce results.  For research compendia that contain more than one code file, it is highly recommended to use file names that indicate the order in which they must be run and/or provide this information in the README file (see Episode 3: Documentation Review in [Lesson 2: Curating for Reproducibility Workflows](https://curating4reproducibility.org/cure-carpentry-02-workflows/) in the Curating for Reproducibility curriculum for more on the README file).
 
 Use of a **main file**, while not a strict requirement, can do even more to enhance reproducibility.  A main file, when executed, runs all of the other code files in the research compendium in the proper sequence to generate all of the tables, figures, and in-text results presented in the manuscript. It also provides an overview of how the code files are interconnected, which makes it easier to understand and re-trace the analytical workflow.  This makes the main file the starting point for fully automated push-button reproducibility, which is what curating for reproducibility hopes to achieve.
 
@@ -150,7 +150,7 @@ log close
 
 > ## Spotlight: Our Language Choices
 >
-> The main file may be more familiar to some people as the master file.  While master file is the term that has been adopted to refer to the file containing code that initiates execution of code files in the correct order, this term is falling out of favor. 
+> The **main file** may be more familiar to some people as the *master file*.  While master file is the term that has been adopted to refer to the file containing code that initiates execution of code files in the correct order, this term is falling out of favor. 
 >  
 > Many in the tech community are recognizing the terms such as “master” and “slave” are racially-loaded terms that can be offensive to Black people, who are underrepresented in tech community.  By adopting more neutral terms such as *main*, *primary*, or *parent* for master and *secondary*, *follower* or *child* for slave, unnecessary references to slavery is avoided.  
 >  
@@ -227,7 +227,7 @@ To assess whether the code upholds the reproducibility standard of being both **
 >      - Variable transformation scripts
 >      - Data analysis commands
 >      - Log commands
-> - Does the code header metadata include all essential information needed to run the analysis (see [Code Header Metadata Checklist]()?
+> - Does the code header metadata include all essential information needed to run the analysis (see the Code Header Metadata Checklist above)?
 > - Do non-executable comments provide signposts for the analytical steps in the computational workflow?
 > - Do data import commands use relative file paths instead of absolute file paths?
 > - If the research compendium contains multiple code files, do the filenames indicate the order in which the code files should be executed?
