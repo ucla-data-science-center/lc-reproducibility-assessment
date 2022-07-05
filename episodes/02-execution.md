@@ -54,22 +54,16 @@ sessionInfo()
 > {: .source}
 {: .callout}
 
-### Running code in RStudio
-
-1. Open the .R file in R Studio. 
-2. Click on the Run button.
-
-[IMAGE with RStudio screenshot showing  code, console, etc.]
-
 > ## Exercise: Let's Run Some Code!
 >
-> Open the sample code file in RStudio and run the code.
+> Open the sample code file and run the code. Did it run successfully?  
 >
 > > ## Solution
 > >
 > > If the code ran correctly using the specified software version, you should see this:
 > >
 > > [IMAGE]
+> >
 > {: .solution}
 {: .challenge}
 

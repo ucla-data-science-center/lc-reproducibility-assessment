@@ -121,5 +121,7 @@ It is highly recommended that researchers run their code and verify their result
 
 More often than not, there are simple explanations for these inconsistencies. The vast majority of researchers share their compendia in good faith and with the expectation that their code will reproduce their reported results.  As the first re-users of the research compendium, curators can flag these inconsistencies so that researchers have the opportunity to make corrections *before* sharing it publicly.
 
+Continue to [Lesson 4: Compendium Packaging and Publishing](https://curating4reproducibility.org/cure-carpentry-04-packaging/) of the Curating for Reproducibility curriculum to learn about considerations for sharing the research compendium.
+
 
 {% include links.md %}
