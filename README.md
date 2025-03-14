@@ -1,41 +1,33 @@
-# FIXME Lesson title
+# Reproducibility Assessment: Mastering Code Review
 
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
+This lesson focuses on the critical code review component of the Data Quality Review framework. It provides in-depth guidance on assessing reproducibility through rigorous code review practices, aimed at librarians and information professionals looking to build these essential skills.
 
-This repository generates the corresponding lesson website from [The Carpentries](https://carpentries.org/) repertoire of lessons.
+**Rendered Lesson:**  
+View the rendered lesson at: [https://LibraryCarpentry.github.io/lc-reproducibility-assessment](https://LibraryCarpentry.github.io/lc-reproducibility-assessment)
 
 ## Contributing
 
-We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
-questions, concerns, or experience any difficulties along the way.
-
-We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md) and have a look at
-the [more detailed guidelines][lesson-example] on proper formatting, ways to render the lesson locally, and even
-how to write new episodes.
-
-Please see the current list of [issues][FIXME] for ideas for contributing to this
-repository. For making your contribution, we use the GitHub flow, which is
-nicely explained in the chapter [Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in Pro Git
-by Scott Chacon.
-Look for the tag ![good\_first\_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.
+Your contributions are encouraged! See the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to contribute to the lesson.
 
 ## Maintainer(s)
 
-Current maintainers of this lesson are
+The current maintainers of this lesson are:  
+- Thu-Mai Lewis Christian  
+- Florio Arguillas  
+- Limor Peer
 
-- FIXME
-- FIXME
-- FIXME
+## Acknowledgements
 
-## Authors
-
-A list of contributors to the lesson can be found in <AUTHORS>
+We extend our thanks to all contributors and the broader reproducibility community, whose insights have helped shape this lesson.
 
 ## Citation
 
-To cite this lesson, please consult with <CITATION>
+For citation details, please consult the [CITATION.cff](CITATION.cff) file.
 
-[lesson-example]: https://carpentries.github.io/lesson-example
+## License
 
+This lesson is published under a [CC BY 4.0 license](LICENSE.md).
 
+## Contact
 
+For further information, please reach out to the maintainers at [contact@example.com](mailto:contact@example.com).
