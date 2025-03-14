@@ -1,4 +1,4 @@
-# Reproducibility Assessment: Mastering Code Review
+# Reproducibility Assessment
 
 This lesson focuses on the critical code review component of the Data Quality Review framework. It provides in-depth guidance on assessing reproducibility through rigorous code review practices, aimed at librarians and information professionals looking to build these essential skills.
 
